@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 public abstract class Schema {
     private final List<Predicate<Object>> conditions = new ArrayList<>();
 
-    protected void addCondition(Predicate<Object> condition) {
+    protected final void addCondition(Predicate<Object> condition) {
         conditions.add(condition);
     }
 
