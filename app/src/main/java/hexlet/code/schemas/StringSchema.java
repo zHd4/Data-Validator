@@ -3,7 +3,7 @@ package hexlet.code.schemas;
 import java.util.function.Predicate;
 
 @SuppressWarnings("UnusedReturnValue")
-public class StringSchema extends Schema {
+public class StringSchema extends BaseSchema {
     public final StringSchema required() {
         Predicate<Object> condition = value -> {
             if (isString(value)) {
