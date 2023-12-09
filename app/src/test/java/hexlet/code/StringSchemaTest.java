@@ -23,7 +23,6 @@ public class StringSchemaTest {
         Assertions.assertTrue(schema.isValid("hexlet"));
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     @Test
     public void testMinLength() {
         Validator validator = new Validator();
@@ -40,7 +39,6 @@ public class StringSchemaTest {
         Assertions.assertFalse(schema.isValid("what does"));
     }
 
-    @SuppressWarnings("DataFlowIssue")
     @Test
     public void testContains() {
         Validator validator = new Validator();
