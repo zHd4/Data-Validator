@@ -5,9 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class StringSchemaTest {
-    private static final int TEST_INT_VALUE = 5;
-    private static final int MIN_LENGTH = 10;
-
     @Test
     public void testRequired() {
         Validator validator = new Validator();
@@ -20,7 +17,7 @@ public class StringSchemaTest {
 
         Assertions.assertFalse(schema.isValid(null));
         Assertions.assertFalse(schema.isValid(""));
-        Assertions.assertFalse(schema.isValid(TEST_INT_VALUE));
+        Assertions.assertFalse(schema.isValid(5));
 
         Assertions.assertTrue(schema.isValid("what does the fox say"));
         Assertions.assertTrue(schema.isValid("hexlet"));
@@ -31,12 +28,12 @@ public class StringSchemaTest {
         Validator validator = new Validator();
         StringSchema schema = validator.string();
 
-        schema.minLength(MIN_LENGTH);
+        schema.minLength(10);
 
         Assertions.assertTrue(schema.isValid("what does the fox say"));
 
         Assertions.assertFalse(schema.isValid("what"));
-        Assertions.assertFalse(schema.isValid(TEST_INT_VALUE));
+        Assertions.assertFalse(schema.isValid(5));
 
         Assertions.assertFalse(schema.isValid("w"));
         Assertions.assertFalse(schema.isValid("what does"));
