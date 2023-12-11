@@ -3,13 +3,13 @@ package hexlet.code.schemas;
 import java.util.Objects;
 
 @SuppressWarnings("UnusedReturnValue")
-public class NumberSchema extends BaseSchema {
-    public final NumberSchema required() {
+public final class NumberSchema extends BaseSchema {
+    public NumberSchema required() {
         addCondition(Objects::nonNull);
         return this;
     }
 
-    public final NumberSchema positive() {
+    public NumberSchema positive() {
         addCondition(value -> {
             if (Objects.nonNull(value)) {
                 if (isInteger(value)) {
@@ -24,7 +24,7 @@ public class NumberSchema extends BaseSchema {
         return this;
     }
 
-    public final NumberSchema range(int start, int end) {
+    public NumberSchema range(int start, int end) {
         addCondition(value -> {
             int i = value != null ? (int) value : 0;
             return i >= start && i <= end;
