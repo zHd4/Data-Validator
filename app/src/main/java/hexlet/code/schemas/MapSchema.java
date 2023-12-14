@@ -8,18 +8,18 @@ import java.util.function.Predicate;
 @SuppressWarnings("UnusedReturnValue")
 public final class MapSchema extends BaseSchema {
     public MapSchema required() {
-        addCondition(Objects::nonNull);
+        addCondition("required", Objects::nonNull);
         return this;
     }
 
     public MapSchema sizeof(int size) {
-        addCondition(entity -> ((Map<?, ?>) entity).size() == size);
+        addCondition("sizeof", entity -> ((Map<?, ?>) entity).size() == size);
         return this;
     }
 
     @SuppressWarnings("unchecked")
     public MapSchema shape(Map<String, BaseSchema> schemas) {
-        addCondition(data -> {
+        Predicate<Object> condition = data -> {
             Map<String, Object> map = (Map<String, Object>) data;
 
             Predicate<Map.Entry<String, Object>> isNotValid = entry -> {
@@ -33,8 +33,9 @@ public final class MapSchema extends BaseSchema {
                     .toList();
 
             return notValid.isEmpty();
-        });
+        };
 
+        addCondition("shape", condition);
         return this;
     }
 }
