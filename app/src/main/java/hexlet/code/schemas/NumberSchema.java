@@ -1,16 +1,17 @@
 package hexlet.code.schemas;
 
 import java.util.Objects;
+import java.util.function.Predicate;
 
 @SuppressWarnings("UnusedReturnValue")
 public final class NumberSchema extends BaseSchema {
     public NumberSchema required() {
-        addCondition(Objects::nonNull);
+        addCondition("required", Objects::nonNull);
         return this;
     }
 
     public NumberSchema positive() {
-        addCondition(value -> {
+        Predicate<Object> condition = value -> {
             if (Objects.nonNull(value)) {
                 if (isInteger(value)) {
                     return (int) value > 0;
@@ -19,17 +20,19 @@ public final class NumberSchema extends BaseSchema {
                 return true;
             }
             return false;
-        });
+        };
 
+        addCondition("positive", condition);
         return this;
     }
 
     public NumberSchema range(int start, int end) {
-        addCondition(value -> {
+        Predicate<Object> condition = value -> {
             int i = value != null ? (int) value : 0;
             return i >= start && i <= end;
-        });
+        };
 
+        addCondition("range", condition);
         return this;
     }
 
