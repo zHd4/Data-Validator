@@ -1,18 +1,18 @@
 package hexlet.code.schemas;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class BaseSchema {
-    private final List<Predicate<Object>> conditions = new ArrayList<>();
+    private final Map<String, Predicate<Object>> conditions = new HashMap<>();
 
-    protected final void addCondition(Predicate<Object> condition) {
-        conditions.add(condition);
+    protected final void addCondition(String name, Predicate<Object> condition) {
+        conditions.put(name, condition);
     }
 
     public final boolean isValid(Object value) {
-        for (Predicate<Object> condition : conditions) {
+        for (Predicate<Object> condition : conditions.values()) {
             if (!condition.test(value)) {
                 return false;
             }
