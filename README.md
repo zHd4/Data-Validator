@@ -7,11 +7,11 @@ A data validator is a library that can be used to check the correctness of any d
 
 Example:
 ```java
-import hexlet.code.Validator;
-import hexlet.code.schemas.StringSchema;
-import hexlet.code.schemas.NumberSchema;
-import hexlet.code.schemas.MapSchema;
-import hexlet.code.schemas.BaseSchema;
+import com.zhd4.lib.datavalidator.Validator;
+import com.zhd4.lib.datavalidator.schemas.StringSchema;
+import com.zhd4.lib.datavalidator.schemas.NumberSchema;
+import com.zhd4.lib.datavalidator.schemas.MapSchema;
+import com.zhd4.lib.datavalidator.schemas.BaseSchema;
 
 Validator v = new Validator();
 
