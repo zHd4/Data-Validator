@@ -1,8 +1,8 @@
-package hexlet.code;
+package com.zhd4.lib.datavalidator;
 
-import hexlet.code.schemas.MapSchema;
-import hexlet.code.schemas.NumberSchema;
-import hexlet.code.schemas.StringSchema;
+import com.zhd4.lib.datavalidator.schemas.MapSchema;
+import com.zhd4.lib.datavalidator.schemas.NumberSchema;
+import com.zhd4.lib.datavalidator.schemas.StringSchema;
 
 public final class Validator {
     public StringSchema string() {

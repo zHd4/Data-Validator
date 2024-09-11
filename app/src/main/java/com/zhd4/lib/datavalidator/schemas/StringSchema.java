@@ -1,4 +1,4 @@
-package hexlet.code.schemas;
+package com.zhd4.lib.datavalidator.schemas;
 
 import java.util.function.Predicate;
 

@@ -1,6 +1,6 @@
-package hexlet.code;
+package com.zhd4.lib.datavalidator;
 
-import hexlet.code.schemas.StringSchema;
+import com.zhd4.lib.datavalidator.schemas.StringSchema;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
