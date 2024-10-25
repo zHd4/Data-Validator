@@ -1,8 +1,8 @@
-package com.zhd4.lib.datavalidator;
+package lib.datavalidator;
 
-import com.zhd4.lib.datavalidator.schemas.MapSchema;
-import com.zhd4.lib.datavalidator.schemas.NumberSchema;
-import com.zhd4.lib.datavalidator.schemas.StringSchema;
+import lib.datavalidator.schemas.MapSchema;
+import lib.datavalidator.schemas.NumberSchema;
+import lib.datavalidator.schemas.StringSchema;
 
 public final class Validator {
     public StringSchema string() {

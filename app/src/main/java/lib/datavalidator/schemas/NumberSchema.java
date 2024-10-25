@@ -1,4 +1,4 @@
-package com.zhd4.lib.datavalidator.schemas;
+package lib.datavalidator.schemas;
 
 import java.util.Objects;
 import java.util.function.Predicate;

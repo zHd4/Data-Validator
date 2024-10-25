@@ -1,6 +1,6 @@
-package com.zhd4.lib.datavalidator;
+package lib.datavalidator;
 
-import com.zhd4.lib.datavalidator.schemas.NumberSchema;
+import lib.datavalidator.schemas.NumberSchema;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

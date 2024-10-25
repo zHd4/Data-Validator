@@ -1,7 +1,7 @@
-package com.zhd4.lib.datavalidator;
+package lib.datavalidator;
 
-import com.zhd4.lib.datavalidator.schemas.BaseSchema;
-import com.zhd4.lib.datavalidator.schemas.MapSchema;
+import lib.datavalidator.schemas.BaseSchema;
+import lib.datavalidator.schemas.MapSchema;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
