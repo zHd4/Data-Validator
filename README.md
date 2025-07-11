@@ -1,7 +1,7 @@
 ### Data Validator Library
 [![Java CI](https://github.com/zHd4/java-project-78/actions/workflows/main.yml/badge.svg)](https://github.com/zHd4/java-project-78/actions/workflows/main.yml)
-<a href="https://codeclimate.com/github/zHd4/java-project-78/maintainability"><img src="https://api.codeclimate.com/v1/badges/b3fccbe62b2f05ce0246/maintainability" /></a>
-<a href="https://codeclimate.com/github/zHd4/java-project-78/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b3fccbe62b2f05ce0246/test_coverage" /></a>
+[![Maintainability](https://qlty.sh/gh/zHd4/projects/java-project-78/maintainability.svg)](https://qlty.sh/gh/zHd4/projects/java-project-78)
+[![Code Coverage](https://qlty.sh/gh/zHd4/projects/java-project-78/coverage.svg)](https://qlty.sh/gh/zHd4/projects/java-project-78)
 
 A data validator is a library that can be used to check the correctness of any data. There are many such libraries in every programming language, because almost all programs work with external data that need to be checked for correctness. First of all, we are talking about form data filled in by users.
 
